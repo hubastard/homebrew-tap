@@ -1,0 +1,32 @@
+# Points Formula/speedrun.rb at speedrun's latest release once its macOS and Linux packages and
+# their checksums are up (update.sh). Run after a release
+# (gh workflow run update.yml -R hubastard/homebrew-tap), and every 6 hours in case.
+name: Update speedrun
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Write the formula
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./update.sh
+
+      - name: Commit it
+        run: |
+          git add Formula/speedrun.rb
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "speedrun $(sed -n 's/^  version "\(.*\)"$/\1/p' Formula/speedrun.rb)"
+          git push
