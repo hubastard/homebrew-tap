@@ -24,7 +24,6 @@ cat > Formula/speedrun.rb <<EOF
 class Speedrun < Formula
   desc "Fast black-box UI tests for Android and iOS, in plain YAML"
   homepage "https://github.com/$REPO"
-  version "${version#v}"
   license "Apache-2.0"
 
   on_macos do

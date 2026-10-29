@@ -2,7 +2,6 @@
 class Speedrun < Formula
   desc "Fast black-box UI tests for Android and iOS, in plain YAML"
   homepage "https://github.com/hubastard/speedrun"
-  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
