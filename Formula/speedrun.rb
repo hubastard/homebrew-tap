@@ -1,4 +1,4 @@
-# Written by update.sh for speedrun v0.2.3: edits here are overwritten.
+# Written by update.sh for speedrun v0.2.4: edits here are overwritten.
 class Speedrun < Formula
   desc "Fast black-box UI tests for Android and iOS, in plain YAML"
   homepage "https://github.com/hubastard/speedrun"
@@ -8,8 +8,8 @@ class Speedrun < Formula
     depends_on arch: :arm64
 
     on_arm do
-      url "https://github.com/hubastard/speedrun/releases/download/v0.2.3/speedrun-v0.2.3-macos-arm64.tar.gz"
-      sha256 "f2046ec90c28ec1f457c6666ea20413338095a3d732cb8aa05692118440d052d"
+      url "https://github.com/hubastard/speedrun/releases/download/v0.2.4/speedrun-v0.2.4-macos-arm64.tar.gz"
+      sha256 "383676372d5d7d67ee63a7546174be5d84ce808d937e937dc9271c2bd4cc2a64"
     end
   end
 
@@ -17,8 +17,8 @@ class Speedrun < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/hubastard/speedrun/releases/download/v0.2.3/speedrun-v0.2.3-linux-x86_64.tar.gz"
-      sha256 "608823b4888c13ab8cf64ef5b2980c22484cc4e48e5b6d2f00d94b906c659101"
+      url "https://github.com/hubastard/speedrun/releases/download/v0.2.4/speedrun-v0.2.4-linux-x86_64.tar.gz"
+      sha256 "801c5c77d8d094474f725773ee8e13aaeac18c895e5ff142c18dc763aa09e6ac"
     end
   end
 
